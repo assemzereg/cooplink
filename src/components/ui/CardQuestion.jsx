@@ -43,11 +43,17 @@ const CardQuestion = () => {
 
   const addProd = (e) => {
     e.preventDefault()
-    setListProd(listProd.concat(prod))
+    setPage(1)
+
+    let pid = 13
+    if (prod === 'Wood') pid = 2
+    else if (prod === 'Plastic') pid = 3
+    else if (prod === 'Iron') pid = 1
+
+    setListProd((prev) => [...prev, pid])
+
     setProd('')
-    setBudget(0)
     setIndustry('')
-    setMass(0)
   }
 
   const sendCommande = (e) => {
@@ -68,23 +74,24 @@ const CardQuestion = () => {
     }
 
     setListProd((prev) => [...prev, pid])
+    console.log('res', commandeObject)
 
-    setPage(0)
-    setProd('')
-    setBudget(0)
-    setIndustry('')
-    setMass(0)
+    // setPage(0)
+    // setProd('')
+    // setBudget(0)
+    // setIndustry('')
+    // setMass(0)
 
     commandeService
       .create(commandeObject)
       .then((resp) => {
         console.log('success')
         console.log(resp.data)
+        localStorage.setItem('data', JSON.stringify(resp.data))
         navigate('/loading')
       })
       .catch((err) => {
-        console.log('error')
-        navigate('/welcome')
+        console.error('error', err)
       })
   }
 
@@ -127,6 +134,13 @@ const CardQuestion = () => {
                 />
               </div>
               <div className="flex justify-end">
+                <Button
+                  title={'Add Other Industry'}
+                  color="text-white"
+                  bgcolor="bg-orange-500"
+                  onclick={addProd}
+                />
+                <div className="mr-4"></div>
                 <Button
                   title={'Next'}
                   color="text-white"

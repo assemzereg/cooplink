@@ -5,13 +5,61 @@
         "question": "What is the industry you what to start ",
         "options": [
           "Material premiers",
-          "Wood-working",
-          "Metal working",
-          "Wod working and E-commerce"
+          "Marketing"
         ]
         
       }
     ],
+  "Marketing": [
+      {
+          "intro":"In this industry we will provide you with a company that will manage your social medias so you can be more in had with the products and let us find your marketres"
+      },
+      {
+        "id": 1,
+        "question": "service",
+        "options":   ["Social Media"]
+      },
+    {
+      "id": 2,
+      "question": "What is your budget",
+      "options": [
+        "100",
+        "200",
+        "300",
+        "400"
+      ]
+      
+    },
+    {
+      "id": 3,
+      "question": "What is the mass you intend to work with?",
+      "options": [
+        "100",
+        "200",
+        "300",
+        "400"
+      ]
+      
+    },
+    {
+      "id": 4,
+      "company":"we found you the folowing companies ",
+      "acuray":"3"
+
+    },
+    {
+      "id": 6,
+      "company":"we found you the folowing companies ",
+      "acuray":"2"
+
+    },
+    {
+      "id": 7,
+      "company":"we found you the folowing companies ",
+      "acuray":"2"
+
+    }
+  ],
   "Material premiers": [
       {
           "intro":"In this industry we will provide you with a company that will manage your social medias so you can be more in had with the products and let us find your marketres"
