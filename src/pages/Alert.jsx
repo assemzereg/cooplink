@@ -17,7 +17,7 @@ const Alert = () => {
     <div className="w-full h-screen bg-primary-500 ">
       <div className="bg-2 bg-contain flex flex-col items-center justify-center h-full w-full p-16 relative">
         <img src={Logo} alt="" className="mb-10" />
-        <h1 className="text-red-700 font-bold text-4xl border-2 border-red-700 mb-10">
+        <h1 className="font-bold text-orange-500 text-4xl mb-10">
           Your budget is too low!
         </h1>
         <HashLoader loading={true} color="white" />
